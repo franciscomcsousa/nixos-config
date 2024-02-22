@@ -12,6 +12,7 @@ requiredPackages = with pkgs;
 	spotify
 	thunderbird
 	tmux
+	unzip
 	vscode
 	xournalpp
 ];
