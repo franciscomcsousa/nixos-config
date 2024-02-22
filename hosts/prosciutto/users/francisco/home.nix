@@ -21,17 +21,10 @@ in
 	{
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = {
-      inherit configDir;
-    };
   };
 	
 	home-manager.users."francisco" = { pkgs, configDir,	...}: 
 	{
-    imports =
-    [
-      profiles.neovim
-    ];
 		home = 
 		{
 			username = "francisco";

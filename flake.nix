@@ -1,12 +1,11 @@
 {
-
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 
     home = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -20,7 +19,7 @@
 		user = "francisco";
     #pkgs = nixpkgs.legacyPackages.${system};
     pkgs = import inputs.nixpkgs {
-      inherit system;
+		inherit system;
 			config = {
 	  		allowUnfree = true;
 			};
@@ -51,8 +50,6 @@
       lib.attrsets.mapAttrs' doMagic (builtins.readDir dir);
 
 		_modules = importRecursive ./modules;
-
-		_profiles = mkProfiles ./profiles;
 
     mkHost = {
       name,
