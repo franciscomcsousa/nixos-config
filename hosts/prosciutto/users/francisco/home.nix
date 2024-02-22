@@ -2,18 +2,18 @@
 let
 requiredPackages = with pkgs;
 [
-    hello
-    brave
-    discord
-    firefox
-    jetbrains-toolbox
-    neofetch
-    openjdk
-    spotify
-    thunderbird
-    tmux
-    vscode
-    xournalpp
+	brave
+	discord
+	firefox
+	hello
+	jetbrains.idea-ultimate
+	neofetch
+	openjdk
+	spotify
+	thunderbird
+	tmux
+	vscode
+	xournalpp
 ];
 in
 {
@@ -21,10 +21,17 @@ in
 	{
     useGlobalPkgs = true;
     useUserPackages = true;
+    extraSpecialArgs = {
+      inherit configDir;
+    };
   };
 	
 	home-manager.users."francisco" = { pkgs, configDir,	...}: 
 	{
+    imports =
+    [
+      profiles.neovim
+    ];
 		home = 
 		{
 			username = "francisco";
