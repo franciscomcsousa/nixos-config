@@ -32,6 +32,7 @@ in
     imports =
     [
       profiles.neovim
+			profiles.git
     ];
 		home = 
 		{
