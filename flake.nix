@@ -49,8 +49,6 @@
     in
       lib.attrsets.mapAttrs' doMagic (builtins.readDir dir);
 
-		_modules = importRecursive ./modules;
-
     mkHost = {
       name,
       dir,
@@ -70,8 +68,9 @@
 						home-manager
 					]
 					++ (importRecursive dir)
-					++ _modules;
+					++ (importRecursive ./modules);
 		};
+    
 		mkHosts = dir: let
       filterHosts = hosts: lib.attrsets.filterAttrs (key: value: value == "directory") hosts;
     in

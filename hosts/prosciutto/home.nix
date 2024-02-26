@@ -29,7 +29,7 @@ in
 	
 	home-manager.users."francisco" = { pkgs, configDir,	...}: 
 	{
-    imports = with profiles;
+    imports = with profiles.user;
     [
       neovim
 			git
