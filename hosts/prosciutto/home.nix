@@ -6,9 +6,12 @@ requiredPackages = with pkgs;
 	discord
 	firefox
 	hello
+	flutter-unwrapped
 	jetbrains.idea-ultimate
 	neofetch
 	openjdk
+	python311Packages.pip
+	python3
 	spotify
 	thunderbird
 	tmux
