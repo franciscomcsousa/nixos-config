@@ -6,7 +6,6 @@ requiredPackages = with pkgs;
 	discord
 	firefox
 	hello
-	flutter-unwrapped
 	jetbrains.idea-ultimate
 	neofetch
 	openjdk
