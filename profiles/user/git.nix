@@ -10,6 +10,7 @@
       pull.rebase = true;
 			user.signingkey = "58677D63526D84FC";
       commit.sign = "true";	
+      core.editor = "nvim";
     };	
 	};
 }
