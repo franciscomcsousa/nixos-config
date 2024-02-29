@@ -9,7 +9,7 @@
       color.ui = true;
       pull.rebase = true;
 			user.signingkey = "58677D63526D84FC";
-      commit.sign = "true";	
+      commit.gpgsign = "true";	
       core.editor = "nvim";
     };	
 	};
