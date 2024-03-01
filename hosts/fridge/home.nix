@@ -33,8 +33,8 @@ in
 	{
     imports = with profiles.user;
     [
-		git
-		kitty
+			git
+			kitty
     	neovim
     ];
 		home = 

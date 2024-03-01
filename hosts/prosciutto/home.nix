@@ -34,7 +34,7 @@ in
     imports = with profiles.user;
     [
 	  	git
-		kitty
+			kitty
     	neovim
     ];
 		home = 
