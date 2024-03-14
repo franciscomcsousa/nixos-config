@@ -2,6 +2,7 @@
 let
 requiredPackages = with pkgs;
 [
+	arduino
 	brave
 	discord
 	firefox
@@ -34,6 +35,7 @@ in
     imports = with profiles.user;
     [
 			git
+			gtk
 			kitty
     	neovim
     ];
