@@ -5,6 +5,7 @@ requiredPackages = with pkgs;
 	brave
 	discord
 	firefox
+	gcc
 	hello
 	jetbrains.idea-ultimate
 	neofetch
