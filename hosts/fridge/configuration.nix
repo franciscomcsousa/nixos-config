@@ -9,6 +9,7 @@
     [
       ./hardware-configuration.nix
       profiles.environment.nvidia
+      profiles.environment.desktop.gnome.autoLogin
     ];
 
   # Bootloader.
@@ -41,14 +42,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-	# Auto Login
-	services.xserver.displayManager.job.preStart = "sleep 5";
-	services.xserver.displayManager.autoLogin.enable = true;
-	services.xserver.displayManager.autoLogin.user = "francisco";
 
   # Configure keymap in X11
   services.xserver = {
