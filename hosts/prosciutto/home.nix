@@ -9,6 +9,7 @@ requiredPackages = with pkgs;
 	hello
 	jetbrains.idea-ultimate
 	neofetch
+	obs-studio
 	openjdk
 	python311Packages.pip
 	python3
