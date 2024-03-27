@@ -19,6 +19,7 @@ requiredPackages = with pkgs;
 	tmux
 	unzip
 	vscode
+	zip
 ];
 in
 {

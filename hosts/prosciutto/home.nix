@@ -19,6 +19,7 @@ requiredPackages = with pkgs;
 	unzip
 	vscode
 	xournalpp
+	zip
 ];
 in
 {
