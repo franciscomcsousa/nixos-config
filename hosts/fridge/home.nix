@@ -2,10 +2,12 @@
 let
 requiredPackages = with pkgs;
 [
+	android-studio
 	arduino
 	brave
 	discord
 	firefox
+	flutter
 	gcc
 	hello
 	jetbrains.idea-ultimate
