@@ -4,6 +4,7 @@ requiredPackages = with pkgs;
 [
 	android-studio
 	arduino
+	bat
 	brave
 	discord
 	firefox

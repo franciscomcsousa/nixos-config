@@ -3,11 +3,13 @@ let
 requiredPackages = with pkgs;
 [
 	android-studio
+	bat
 	brave
 	discord
 	firefox
 	flutter
 	gcc
+	gradle_7
 	hello
 	jetbrains.idea-ultimate
 	neofetch
