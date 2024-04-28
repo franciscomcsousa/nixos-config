@@ -10,6 +10,7 @@ requiredPackages = with pkgs;
 	firefox
 	flutter
 	gcc
+	gradle_7
 	hello
 	jetbrains.idea-ultimate
 	neofetch
