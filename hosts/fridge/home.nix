@@ -16,12 +16,12 @@ requiredPackages = with pkgs;
 	neofetch
 	obs-studio
 	openjdk
-	python311Packages.pip
 	python3
 	spotify
-	thunderbird
+	thunderbird	
 	tmux
 	unzip
+	unixODBCDrivers.mariadb
 	vscode
 	zip
 ];
