@@ -41,8 +41,8 @@ in
     imports = with profiles.user;
     [
 	  	git
-		gtk
-		kitty
+			gtk
+			kitty
     	neovim
     ];
 		home = 

@@ -12,6 +12,11 @@
       profiles.environment.desktop.gnome.autoLogin
     ];
 
+  programs.coolercontrol = {
+    enable = true;
+    nvidiaSupport = true;
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

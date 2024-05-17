@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home = {
       url = "github:nix-community/home-manager/release-23.11";
@@ -17,13 +18,21 @@
 
     system = "x86_64-linux";
 		user = "francisco";
-    #pkgs = nixpkgs.legacyPackages.${system};
-    pkgs = import inputs.nixpkgs {
-		inherit system;
-			config = {
-	  		allowUnfree = true;
-			};
-    };
+
+    pkgs = let
+      args = {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
+      import inputs.nixpkgs (args
+        // {
+          overlays = [
+            (_final: _prev: {
+              unstable = import inputs.nixpkgs-unstable args;
+            })
+          ];
+        });
 
 		importRecursive = dir: let
       entries = lib.filesystem.listFilesRecursive dir;

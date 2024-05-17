@@ -16,6 +16,7 @@ requiredPackages = with pkgs;
 	neofetch
 	obs-studio
 	openjdk
+	openrgb
 	python3
 	spotify
 	thunderbird	
@@ -40,11 +41,12 @@ in
 	{
     imports = with profiles.user;
     [
-		git
-		gtk
-		kitty
+			git
+			gtk
+			kitty
     	neovim
     ];
+
 		home = 
 		{
 			username = "francisco";
