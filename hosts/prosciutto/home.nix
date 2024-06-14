@@ -14,6 +14,7 @@ requiredPackages = with pkgs;
 	jetbrains.idea-ultimate
 	neofetch
 	obs-studio
+	unstable.obsidian
 	openjdk
 	python311Packages.pip
 	python3
