@@ -18,6 +18,7 @@ requiredPackages = with pkgs;
 	openjdk
 	openrgb
 	python3
+	rclone
 	spotify
 	thunderbird	
 	tmux
@@ -28,24 +29,22 @@ requiredPackages = with pkgs;
 ];
 in
 {
-	home-manager = 
-	{
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = {
-      inherit configDir;
-    };
-  };
+	home-manager = {
+		useGlobalPkgs = true;
+		useUserPackages = true;
+		extraSpecialArgs = {
+			inherit configDir;
+		};
+  	};
 	
-	home-manager.users."francisco" = { pkgs, configDir,	...}: 
-	{
-    imports = with profiles.user;
-    [
+	home-manager.users."francisco" = { pkgs, configDir,	...}: {
+		imports = with profiles.user;
+		[
 			git
 			gtk
 			kitty
-    	neovim
-    ];
+			neovim
+		];
 
 		home = 
 		{
@@ -54,8 +53,8 @@ in
 			stateVersion = "23.11";
 		};
 
-  	# Let Home Manager install and manage itself.
-  	programs.home-manager.enable = true;
+		# Let Home Manager install and manage itself.
+		programs.home-manager.enable = true;
 
 		home.packages = requiredPackages;   
 	};
