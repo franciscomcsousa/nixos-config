@@ -9,5 +9,6 @@
         job.preStart = "sleep 5";
         autoLogin.enable = true;
         autoLogin.user = "francisco";
+        gdm.wayland = false;
     };
 }
