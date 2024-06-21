@@ -12,6 +12,7 @@
       profiles.environment.desktop.gnome.autoLogin
     ];
 
+  # Control Fans
   programs.coolercontrol = {
     enable = true;
     nvidiaSupport = true;
@@ -24,7 +25,7 @@
   # Latest Kernel
   # boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  #networking.hostName = "nixos"; # Define your hostname.
+  # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -44,6 +45,9 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Lisbon";
+
+  # Dual boot compatibility with Windows
+  time.hardwareClockInLocalTime = true;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
