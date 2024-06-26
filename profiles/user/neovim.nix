@@ -8,10 +8,6 @@
 }:
 {
   programs.neovim =
-    let
-      toLua = str: "lua << EOF\n${str}\nEOF\n";
-      toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-    in
     {
       enable = true;
 
@@ -21,13 +17,25 @@
 
       plugins = with pkgs.vimPlugins; [
         {
-            plugin = comment-nvim;
-            config = toLua "require(\"Comment\").setup()";
+          plugin = tokyonight-nvim;
+          config = "colorscheme tokyonight-night";
+        }
+
+        {
+          plugin = comment-nvim;
+          type = "lua";
+          config = "require(\"Comment\").setup()";
+        }
+
+        {
+          plugin = telescope-nvim;
+          type = "lua";
+          config = builtins.readFile "${configDir}/neovim/plugin/telescope.lua";
         }
       ];
 
       extraLuaConfig = ''
-        ${builtins.readFile "${configDir}/neovim/lua/options.lua"}
+        ${builtins.readFile "${configDir}/neovim/options.lua"}
       '';
     };
 }
