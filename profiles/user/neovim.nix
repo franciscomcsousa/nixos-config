@@ -28,6 +28,17 @@
           type = "lua";
           config = builtins.readFile "${configDir}/neovim/plugin/telescope.lua";
         }
+
+
+        {
+          plugin = lualine-nvim;
+          type = "lua";
+          config = ''  
+            require("lualine").setup({
+            icons_enabled = true
+            })
+          '';
+        }
       ];
 
       extraLuaConfig = ''
