@@ -42,7 +42,7 @@ in
 		[
 			alacritty
 			git
-			gtk
+			#gtk
 			kitty
 			neovim
 		];

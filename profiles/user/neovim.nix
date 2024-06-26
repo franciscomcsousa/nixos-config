@@ -16,10 +16,6 @@
       vimdiffAlias = true;
 
       plugins = with pkgs.vimPlugins; [
-        {
-          plugin = tokyonight-nvim;
-          config = "colorscheme tokyonight-night";
-        }
 
         {
           plugin = comment-nvim;

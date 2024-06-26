@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:danth/stylix/release-23.11";
+    };
   };
 
   outputs = { ... }@inputs:
@@ -75,6 +79,7 @@
 					[
 						{networking.hostName = name;}
 						home-manager
+            inputs.stylix.nixosModules.stylix
 					]
 					++ (importRecursive dir)
 					++ (importRecursive ./modules);
