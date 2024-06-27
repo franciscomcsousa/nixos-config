@@ -51,7 +51,7 @@ in
 		{
 			username = "francisco";
 			homeDirectory = "/home/francisco";
-			stateVersion = "23.11";
+			stateVersion = "24.05";
 		};
 
 		# Let Home Manager install and manage itself.
