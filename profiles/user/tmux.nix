@@ -54,12 +54,13 @@ in
       tmuxPlugins.better-mouse-mode
     ];
     extraConfig = ''
-      set-option -sa terminal-overrides ",xterm*:Tc"
+      set -g mouse on
+			set-option -g default-terminal "screen-256color"
+			set-option -sa terminal-features ',alacritty:RGB'
       set-window-option -g mode-keys vi
       set -g base-index 1
       setw -g pane-base-index 1
-      set -g mouse on
-      set -sg escape-time 10
+      set -sg escape-time 0
     '';
   };
 }
