@@ -21,7 +21,6 @@ requiredPackages = with pkgs;
 	rclone
 	spotify
 	thunderbird	
-	tmux
 	unzip
 	unixODBCDrivers.mariadb
 	vscode
@@ -42,9 +41,10 @@ in
 		[
 			alacritty
 			git
-			#gtk
+			gtk
 			kitty
 			neovim
+			tmux
 		];
 
 		home = 
@@ -56,6 +56,8 @@ in
 
 		# Let Home Manager install and manage itself.
 		programs.home-manager.enable = true;
+
+		stylix.targets.tmux.enable = false;
 
 		home.packages = requiredPackages;   
 	};

@@ -21,7 +21,6 @@ requiredPackages = with pkgs;
 	rclone
 	spotify
 	thunderbird
-	tmux
 	unzip
 	vscode
 	xournalpp
@@ -42,9 +41,10 @@ in
 		[
 			alacritty
 			git
-			#gtk
+			gtk
 			kitty
 			neovim
+			tmux
 		];
 
 		home = {
