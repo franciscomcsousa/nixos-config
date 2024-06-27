@@ -53,6 +53,12 @@
             vim.keymap.set({ 'n', 't' }, '<A-p>', '<CMD>TmuxNavigatePrevious<CR>')
 					'';
         }
+
+        {
+          plugin = nvim-treesitter.withAllGrammars;
+          type = "lua";
+          config = builtins.readFile "${configDir}/neovim/plugin/treesitter.lua";
+        }
         
       ];
 
