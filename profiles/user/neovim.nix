@@ -17,53 +17,22 @@
 
       plugins = with pkgs.vimPlugins; [
 
-        {
-          plugin = comment-nvim;
-          type = "lua";
-          config = "require(\"Comment\").setup()";
-        }
-
-        {
-          plugin = telescope-nvim;
-          type = "lua";
-          config = builtins.readFile "${configDir}/neovim/plugin/telescope.lua";
-        }
-
-
-        {
-          plugin = lualine-nvim;
-          type = "lua";
-          config = ''  
-            require("lualine").setup({
-            icons_enabled = true
-            })
-          '';
-        }
-
-        {
-          plugin = vim-tmux-navigator;
-          type = "lua";
-					config = ''
-            lazy = false
-
-            vim.keymap.set({ 'n', 't' }, '<A-h>', '<CMD>TmuxNavigateLeft<CR>')
-            vim.keymap.set({ 'n', 't' }, '<A-l>', '<CMD>TmuxNavigateRight<CR>')
-            vim.keymap.set({ 'n', 't' }, '<A-k>', '<CMD>TmuxNavigateUp<CR>')
-            vim.keymap.set({ 'n', 't' }, '<A-j>', '<CMD>TmuxNavigateDown<CR>')
-            vim.keymap.set({ 'n', 't' }, '<A-p>', '<CMD>TmuxNavigatePrevious<CR>')
-					'';
-        }
-
-        {
-          plugin = nvim-treesitter.withAllGrammars;
-          type = "lua";
-          config = builtins.readFile "${configDir}/neovim/plugin/treesitter.lua";
-        }
+        comment-nvim
+        telescope-nvim
+        lualine-nvim
+        vim-tmux-navigator
+        nvim-treesitter.withAllGrammars
         
       ];
 
       extraLuaConfig = ''
         ${builtins.readFile "${configDir}/neovim/options.lua"}
+
+        ${builtins.readFile "${configDir}/neovim/plugin/comment.lua"}
+        ${builtins.readFile "${configDir}/neovim/plugin/lualine.lua"}
+        ${builtins.readFile "${configDir}/neovim/plugin/navigator.lua"}
+        ${builtins.readFile "${configDir}/neovim/plugin/telescope.lua"}
+        ${builtins.readFile "${configDir}/neovim/plugin/treesitter.lua"}
       '';
     };
 }
