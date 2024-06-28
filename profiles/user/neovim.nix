@@ -18,6 +18,7 @@
       plugins = with pkgs.vimPlugins; [
 
         comment-nvim
+				neo-tree-nvim
         telescope-nvim
         lualine-nvim
         vim-tmux-navigator
@@ -32,6 +33,7 @@
 				${builtins.readFile "${configDir}/neovim/plugin/lualine.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/git-signs.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/navigator.lua"}
+				${builtins.readFile "${configDir}/neovim/plugin/neo-tree.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/telescope.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/treesitter.lua"}
       '';
