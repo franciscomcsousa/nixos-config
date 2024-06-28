@@ -19,6 +19,7 @@ requiredPackages = with pkgs;
 	python311Packages.pip
 	python3
 	rclone
+	ripgrep
 	spotify
 	thunderbird
 	unzip

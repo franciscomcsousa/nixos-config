@@ -19,6 +19,7 @@ requiredPackages = with pkgs;
 	openrgb
 	python3
 	rclone
+	ripgrep
 	spotify
 	thunderbird	
 	unzip
