@@ -18,6 +18,8 @@
     nvidiaSupport = true;
   };
 
+  programs.zsh.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -72,6 +74,7 @@
     isNormalUser = true;
     description = "Francisco";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };

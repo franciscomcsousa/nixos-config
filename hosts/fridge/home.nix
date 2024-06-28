@@ -44,7 +44,9 @@ in
 			gtk
 			kitty
 			neovim
+			starship
 			tmux
+			zsh
 		];
 
 		home = 

@@ -34,7 +34,7 @@ in
 		extraSpecialArgs = {
 			inherit configDir;
 		};
-  	};
+  };
 	
 	home-manager.users."francisco" = { pkgs, configDir,	...}: {
 		imports = with profiles.user;
@@ -44,7 +44,9 @@ in
 			gtk
 			kitty
 			neovim
+			starship
 			tmux
+			zsh
 		];
 
 		home = {
