@@ -36,9 +36,9 @@
   services.xserver.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "pt";
-    xkbVariant = "nodeadkeys";
+    variant = "nodeadkeys";
   };
 
   # Configure console keymap

@@ -5,10 +5,11 @@
         profiles.environment.desktop.gnome.default
     ];
 
-    services.xserver.displayManager = {
-        job.preStart = "sleep 5";
+    services.displayManager = {
+        preStart = "sleep 5";
         autoLogin.enable = true;
         autoLogin.user = "francisco";
-        gdm.wayland = false;
+        
     };
+    services.xserver.displayManager.gdm.wayland = false;
 }
