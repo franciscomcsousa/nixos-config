@@ -47,6 +47,7 @@
       extraPackages = with pkgs;
       [
         lua-language-server
+				clang-tools
       ];
     };
 }
