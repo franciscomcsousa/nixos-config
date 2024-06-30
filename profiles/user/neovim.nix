@@ -24,7 +24,9 @@
         vim-tmux-navigator
 				nvim-lspconfig
         nvim-treesitter.withAllGrammars
-        gitsigns-nvim        
+        gitsigns-nvim     
+        nvim-web-devicons   
+        alpha-nvim
       ];
 
       extraLuaConfig = ''
@@ -38,6 +40,8 @@
 				${builtins.readFile "${configDir}/neovim/plugin/neo-tree.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/telescope.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/treesitter.lua"}
+        ${builtins.readFile "${configDir}/neovim/plugin/web-icons.lua"}
+        ${builtins.readFile "${configDir}/neovim/plugin/alpha.lua"}
       '';
 
       extraPackages = with pkgs;
