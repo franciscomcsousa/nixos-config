@@ -2,15 +2,13 @@
 let
 requiredPackages = with pkgs;
 [
-	android-studio
 	arduino
 	bat
 	brave
 	discord
 	firefox
-	flutter
+	fzf
 	gcc
-	gradle_7
 	hello
 	jetbrains.idea-ultimate
 	neofetch
@@ -23,7 +21,6 @@ requiredPackages = with pkgs;
 	spotify
 	thunderbird	
 	unzip
-	unixODBCDrivers.mariadb
 	vscode
 	zip
 ];
@@ -35,8 +32,8 @@ in
 		extraSpecialArgs = {
 			inherit configDir;
 		};
-  	};
-	
+	};
+
 	home-manager.users."francisco" = { pkgs, configDir,	...}: {
 		imports = with profiles.user;
 		[
@@ -59,8 +56,6 @@ in
 
 		# Let Home Manager install and manage itself.
 		programs.home-manager.enable = true;
-
-		stylix.targets.tmux.enable = false;
 
 		home.packages = requiredPackages;   
 	};
