@@ -2,8 +2,8 @@
   gtk = {
     enable = true;
     iconTheme = {
-      package = pkgs.gnome.adwaita-icon-theme;
-      name = "Adwaita";
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus";
     };
     #theme = {
     #  package = pkgs.graphite-gtk-theme;
