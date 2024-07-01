@@ -23,7 +23,18 @@ local on_attach = function(_, bufnr)
 	end, {})
 end
 
-require('lspconfig').lua_ls.setup {
+require("neodev").setup({
+  override = function(root_dir, library)
+    if root_dir:find("/home/francisco/Nixos", 1, true) == 1 then
+      library.enabled = true
+      library.plugins = true
+    end
+  end,
+})
+
+local lspconfig = require('lspconfig')
+
+lspconfig.lua_ls.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = function()
@@ -38,6 +49,6 @@ require('lspconfig').lua_ls.setup {
 	}
 }
 
-require('lspconfig')['clangd'].setup {}
+lspconfig['clangd'].setup {}
 
 

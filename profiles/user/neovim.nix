@@ -32,6 +32,7 @@
 				cmp_luasnip
 				cmp-nvim-lsp
 				friendly-snippets
+				neodev-nvim
 				];
 
       extraLuaConfig = ''
