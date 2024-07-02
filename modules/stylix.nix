@@ -1,9 +1,13 @@
-{pkgs, ...}: {
-
+{
+pkgs,
+configDir,
+...
+}: 
+{
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ./wallpaper.png;
+    image = "${configDir}/wallpapers/wallpaper.png";
 
     fonts = {
       monospace = {
