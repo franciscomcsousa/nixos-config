@@ -8,13 +8,11 @@ requiredPackages = with pkgs;
 	firefox
 	fzf
 	gcc
-	hello
 	jetbrains.idea-ultimate
 	neofetch
 	obs-studio
-	unstable.obsidian
+	obsidian
 	openjdk
-	python311Packages.pip
 	python3
 	rclone
 	ripgrep

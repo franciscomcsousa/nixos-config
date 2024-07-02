@@ -2,17 +2,16 @@
 let
 requiredPackages = with pkgs;
 [
-	arduino
 	bat
 	brave
 	discord
 	firefox
 	fzf
 	gcc
-	hello
 	jetbrains.idea-ultimate
 	neofetch
 	obs-studio
+	obsidian
 	openjdk
 	openrgb
 	python3

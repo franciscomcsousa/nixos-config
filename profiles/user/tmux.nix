@@ -32,7 +32,7 @@ in
         extraConfig = ''
           set -g @tilish-navigator 'on'
           set -g @tilish-shiftnum '!"#$%&/()='
-          set -g @tilish-default 'main-horizontal'
+          set -g @tilish-default 'main-vertical'
         '';
       }
  
