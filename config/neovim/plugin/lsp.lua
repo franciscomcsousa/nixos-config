@@ -31,9 +31,10 @@ require("neodev").setup({
     end
   end,
 })
-
+-- lspconfig
 local lspconfig = require('lspconfig')
 
+-- lua_ls: Lua
 lspconfig.lua_ls.setup {
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -49,6 +50,8 @@ lspconfig.lua_ls.setup {
 	}
 }
 
+-- clangd: C
 lspconfig['clangd'].setup {}
 
-
+-- nil_ls: Nix
+lspconfig.nil_ls.setup{}

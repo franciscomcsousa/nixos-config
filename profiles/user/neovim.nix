@@ -1,9 +1,6 @@
 {
-  config,
   configDir,
-  lib,
   pkgs,
-  user,
   ...
 }:
 {
@@ -51,10 +48,11 @@
         ${builtins.readFile "${configDir}/neovim/plugin/cmp.lua"}
       '';
 
-      extraPackages = with pkgs;
-      [
-        lua-language-server
+			extraPackages = with pkgs;
+			[
+				lua-language-server
 				clang-tools
-      ];
-    };
+				nil
+			];
+		};
 }
