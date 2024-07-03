@@ -7,7 +7,7 @@ configDir,
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = "${configDir}/wallpapers/wallpaper.png";
+    image = "${configDir}/wallpapers/big-sur.png";
 
     fonts = {
       monospace = {
@@ -34,6 +34,8 @@ configDir,
 			popups = 1.0;
 		};
   
+		polarity = "dark";
+
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Classic";
