@@ -55,3 +55,6 @@ lspconfig['clangd'].setup {}
 
 -- nil_ls: Nix
 lspconfig.nil_ls.setup{}
+
+-- pyright: Python
+lspconfig.pyright.setup{}

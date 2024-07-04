@@ -53,6 +53,7 @@
 				lua-language-server
 				clang-tools
 				nil
+				pyright
 			];
 		};
 }
