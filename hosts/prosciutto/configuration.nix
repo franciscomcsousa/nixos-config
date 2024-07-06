@@ -5,13 +5,10 @@
 { config, pkgs, lib, inputs, profiles, ... }:
 
 {
-  imports =
+  imports = with profiles.environment;
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      profiles.environment.desktop.gnome.default
+      desktop.gnome.default
     ];
-
-  programs.zsh.enable = true;
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -42,6 +39,9 @@
 
   # Configure console keymap
   console.keyMap = "pt-latin1";
+
+	# Enable zsh
+  programs.zsh.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

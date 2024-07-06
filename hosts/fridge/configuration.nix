@@ -2,23 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, inputs, profiles, ... }:
+{ pkgs, inputs, profiles, ... }:
 
 {
-  imports =
+  imports = with profiles.environment;
     [
-      ./hardware-configuration.nix
-      profiles.environment.nvidia
-      profiles.environment.desktop.gnome.autoLogin
+			coolercontrol
+      nvidia
+      desktop.gnome.autoLogin
     ];
-
-  # Control Fans
-  programs.coolercontrol = {
-    enable = true;
-    nvidiaSupport = true;
-  };
-
-  programs.zsh.enable = true;
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
@@ -68,6 +60,10 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+	
+	# Enable zsh
+	programs.zsh.enable = true;
+
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.francisco = {
