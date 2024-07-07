@@ -7,7 +7,7 @@ configDir,
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = "${configDir}/wallpapers/big-sur.png";
+    image = "${configDir}/wallpapers/minimal.png";
 
     fonts = {
       monospace = {

@@ -14,7 +14,6 @@
   programs.zsh.enable = true;
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   #networking.hostName = "nixos"; # Define your hostname.
@@ -71,9 +70,9 @@
      git
   ];
 
-  environment.interactiveShellInit = ''
-  	neofetch
-  '';
+  # environment.interactiveShellInit = ''
+  # 	neofetch
+  # '';
 
   
 
