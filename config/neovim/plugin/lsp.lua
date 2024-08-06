@@ -51,10 +51,16 @@ lspconfig.lua_ls.setup {
 }
 
 -- clangd: C
-lspconfig['clangd'].setup {}
+lspconfig.clangd.setup {}
 
 -- nil_ls: Nix
 lspconfig.nil_ls.setup{}
 
 -- pyright: Python
 lspconfig.pyright.setup{}
+
+-- gopls: Go
+lspconfig.gopls.setup{}
+
+-- tsserver: Typescript
+lspconfig.tsserver.setup{}

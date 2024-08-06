@@ -30,6 +30,7 @@
 				cmp-nvim-lsp
 				friendly-snippets
 				neodev-nvim
+				nvim-autopairs
 				];
 
       extraLuaConfig = ''
@@ -46,6 +47,7 @@
         ${builtins.readFile "${configDir}/neovim/plugin/web-icons.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/alpha.lua"}
         ${builtins.readFile "${configDir}/neovim/plugin/cmp.lua"}
+        ${builtins.readFile "${configDir}/neovim/plugin/autopairs.lua"}
       '';
 
 			extraPackages = with pkgs;
@@ -54,6 +56,9 @@
 				clang-tools
 				nil
 				pyright
+				gopls
+				typescript
+				nodePackages_latest.typescript-language-server
 			];
 		};
 }

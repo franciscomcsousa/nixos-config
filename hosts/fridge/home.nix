@@ -8,8 +8,10 @@ requiredPackages = with pkgs;
 	firefox
 	fzf
 	gcc
+	go
 	jetbrains.idea-ultimate
 	neofetch
+	nodejs_22
 	obs-studio
 	obsidian
 	openjdk
