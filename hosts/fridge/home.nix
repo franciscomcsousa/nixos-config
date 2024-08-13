@@ -3,7 +3,6 @@ let
 requiredPackages = with pkgs;
 [
 	bat
-	brave
 	discord
 	firefox
 	fzf
@@ -23,6 +22,7 @@ requiredPackages = with pkgs;
 	thunderbird	
 	unzip
 	vscode
+	yazi
 	zip
 ];
 in

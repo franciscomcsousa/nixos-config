@@ -17,6 +17,7 @@
 
 		shellAliases = {
 			onedrive = "rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive > /dev/null 2>&1 &!";
+			open = "xdg-open";
 		};
 	};
 }
