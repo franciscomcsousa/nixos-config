@@ -7,6 +7,7 @@
 				edit = [ 
 					{
 						run = "nvim \"$@\"";
+						block = true;
 					} 
 				];
 				open = [ 
@@ -22,7 +23,7 @@
 				prepend_keymap = [
 					{
 						on = ["t"];
-						run = "shell \"tmux split-window \"nvim \"$0\"\"\"--orphan";
+						run = "shell \"tmux split-window nvim $0\" --confirm";
 						desc = "Open file in new tmux pane";
 					}
 				]; 
