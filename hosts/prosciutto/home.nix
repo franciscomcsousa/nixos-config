@@ -4,6 +4,7 @@ requiredPackages = with pkgs;
 [
 	bat
 	discord
+	exiftool
 	firefox
 	fzf
 	gcc
@@ -22,7 +23,6 @@ requiredPackages = with pkgs;
 	unzip
 	vscode
 	xournalpp
-	yazi
 	zip
 ];
 in
@@ -45,6 +45,7 @@ in
 			neovim
 			starship
 			tmux
+			yazi
 			zsh
 		];
 
