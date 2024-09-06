@@ -1,5 +1,5 @@
 {...}: {
   xdg.mime.defaultApplications = {
-    "application/pdf" = "firefox.desktop";
+    "application/pdf" = "org.gnome.Evince.desktop";
   };
 }
