@@ -24,6 +24,7 @@ requiredPackages = with pkgs;
 	vscode
 	xournalpp
 	zip
+	zoom-us
 ];
 in
 {

@@ -24,6 +24,7 @@ requiredPackages = with pkgs;
 	unzip
 	vscode
 	zip
+	zoom-us
 ];
 in
 {
