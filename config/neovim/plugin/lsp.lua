@@ -1,5 +1,4 @@
 local on_attach = function(_, bufnr)
-
 	local bufmap = function(keys, func)
 		vim.keymap.set('n', keys, func, { buffer = bufnr })
 	end
@@ -18,6 +17,10 @@ local on_attach = function(_, bufnr)
 
 	bufmap('K', vim.lsp.buf.hover)
 
+	bufmap('<leader>i', function()
+		vim.lsp.buf.format { async = true }
+	end)
+
 	vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
 		vim.lsp.buf.format()
 	end, {})
@@ -27,12 +30,12 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require("neodev").setup({
-  override = function(root_dir, library)
-    if root_dir:find("/home/francisco/Nixos", 1, true) == 1 then
-      library.enabled = true
-      library.plugins = true
-    end
-  end,
+	override = function(root_dir, library)
+		if root_dir:find("/home/francisco/Nixos", 1, true) == 1 then
+			library.enabled = true
+			library.plugins = true
+		end
+	end,
 })
 -- lspconfig
 local lspconfig = require('lspconfig')
@@ -60,25 +63,25 @@ lspconfig.clangd.setup {
 }
 
 -- nil_ls: Nix
-lspconfig.nil_ls.setup{
+lspconfig.nil_ls.setup {
 	capabilities = capabilities,
 	on_attach = on_attach
 }
 
 -- pyright: Python
-lspconfig.pyright.setup{
+lspconfig.pyright.setup {
 	capabilities = capabilities,
 	on_attach = on_attach
 }
 
 -- gopls: Go
-lspconfig.gopls.setup{
+lspconfig.gopls.setup {
 	capabilities = capabilities,
 	on_attach = on_attach
 }
 
 -- tsserver: Typescript
-lspconfig.tsserver.setup{
+lspconfig.tsserver.setup {
 	capabilities = capabilities,
 	on_attach = on_attach
 }
