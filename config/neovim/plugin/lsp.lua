@@ -23,6 +23,9 @@ local on_attach = function(_, bufnr)
 	end, {})
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+
 require("neodev").setup({
   override = function(root_dir, library)
     if root_dir:find("/home/francisco/Nixos", 1, true) == 1 then
@@ -51,16 +54,31 @@ lspconfig.lua_ls.setup {
 }
 
 -- clangd: C
-lspconfig.clangd.setup {}
+lspconfig.clangd.setup {
+	capabilities = capabilities,
+	on_attach = on_attach
+}
 
 -- nil_ls: Nix
-lspconfig.nil_ls.setup{}
+lspconfig.nil_ls.setup{
+	capabilities = capabilities,
+	on_attach = on_attach
+}
 
 -- pyright: Python
-lspconfig.pyright.setup{}
+lspconfig.pyright.setup{
+	capabilities = capabilities,
+	on_attach = on_attach
+}
 
 -- gopls: Go
-lspconfig.gopls.setup{}
+lspconfig.gopls.setup{
+	capabilities = capabilities,
+	on_attach = on_attach
+}
 
 -- tsserver: Typescript
-lspconfig.tsserver.setup{}
+lspconfig.tsserver.setup{
+	capabilities = capabilities,
+	on_attach = on_attach
+}
