@@ -9,6 +9,7 @@ requiredPackages = with pkgs;
 	fzf
 	gcc
 	go
+	gnumake
 	jetbrains.idea-ultimate
 	neofetch
 	nodejs_22
