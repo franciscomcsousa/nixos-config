@@ -17,6 +17,7 @@ requiredPackages = with pkgs;
 	obsidian
 	openjdk
 	openrgb
+	prismlauncher
 	python3
 	rclone
 	ripgrep
