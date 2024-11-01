@@ -25,9 +25,7 @@ in
 	home-manager.users."francisco" = { pkgs, configDir,	...}: {
 		imports = with profiles.user;
 		[
-			alacritty
 			git
-			kitty
 			neovim
 			starship
 			tmux

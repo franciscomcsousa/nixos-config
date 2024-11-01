@@ -7,6 +7,7 @@
 {
   imports = with profiles.environment;
     [ # Include the results of the hardware scan.
+		  jellyfin
     ];
 
   # Bootloader.
