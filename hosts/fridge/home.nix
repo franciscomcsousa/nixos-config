@@ -3,19 +3,22 @@ let
 requiredPackages = with pkgs;
 [
 	bat
+	bear
 	discord
 	exiftool
 	firefox
 	fzf
 	gcc
+	gdb
 	go
 	gnumake
+	inkscape
 	jetbrains.idea-ultimate
 	neofetch
+	jre8
 	nodejs_22
 	obs-studio
 	obsidian
-	openjdk
 	openrgb
 	prismlauncher
 	python3
