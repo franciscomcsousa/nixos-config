@@ -5,8 +5,8 @@
     openFirewall = true;
   };
   environment.systemPackages = with pkgs; [
-    jellyfin
-    jellyfin-web
-    jellyfin-ffmpeg
+    unstable.jellyfin
+    unstable.jellyfin-web
+    unstable.jellyfin-ffmpeg
   ];
 }
