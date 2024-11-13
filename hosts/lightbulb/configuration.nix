@@ -69,9 +69,6 @@
   services.openssh = {
 	  enable = true;
 		settings.PasswordAuthentication = false;
-		ports = [
-      41516
-		];
 	};
 
   # Open ports in the firewall.
