@@ -5,6 +5,7 @@ requiredPackages = with pkgs;
 	bat
 	exiftool
 	fzf
+	mcrcon
 	neofetch
 	python3
 	rclone
