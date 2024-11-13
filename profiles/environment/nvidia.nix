@@ -1,7 +1,7 @@
 {config, lib, pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    linuxKernel.packages.linux_zen.nvidia_x11_production
+    unstable.linuxKernel.packages.linux_zen.nvidia_x11
   ];
 
   # Enable OpenGL

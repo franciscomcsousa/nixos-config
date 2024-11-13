@@ -10,6 +10,7 @@
 			coolercontrol
       nvidia
       desktop.gnome.autoLogin
+			tailscale
     ];
 
   # Bootloader.
