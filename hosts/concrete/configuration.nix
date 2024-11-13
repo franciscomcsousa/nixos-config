@@ -8,6 +8,7 @@
   imports = with profiles.environment;
     [ # Include the results of the hardware scan.
       desktop.gnome.default
+			tailscale
     ];
 
   # Bootloader.

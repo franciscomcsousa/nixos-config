@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
 		  jellyfin
 			minecraft
+			tailscale
     ];
 
   # Bootloader.
