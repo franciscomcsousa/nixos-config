@@ -1,70 +1,70 @@
 { pkgs, profiles, configDir, ... }:
 let
-requiredPackages = with pkgs;
-[
-	bat
-	bear
-	discord
-	exiftool
-	firefox
-	fzf
-	gcc
-	gdb
-	go
-	gnumake
-	inkscape
-	jetbrains.idea-ultimate
-	neofetch
-	jre8
-	nodejs_22
-	obs-studio
-	obsidian
-	openrgb
-	prismlauncher
-	python3
-	rclone
-	ripgrep
-	spotify
-	thunderbird	
-	unzip
-	vscode
-	zip
-	zoom-us
-];
+  requiredPackages = with pkgs;
+    [
+      bat
+      bear
+      discord
+      exiftool
+      firefox
+      fzf
+      gcc
+      gdb
+      go
+      gnumake
+      inkscape
+      jetbrains.idea-ultimate
+      neofetch
+      jre8
+      nodejs_22
+      obs-studio
+      obsidian
+      openrgb
+      prismlauncher
+      python3
+      rclone
+      ripgrep
+      spotify
+      thunderbird
+      unzip
+      vscode
+      zip
+      zoom-us
+    ];
 in
 {
-	home-manager = {
-		useGlobalPkgs = true;
-		useUserPackages = true;
-		extraSpecialArgs = {
-			inherit configDir;
-		};
-	};
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = {
+      inherit configDir;
+    };
+  };
 
-	home-manager.users."francisco" = { pkgs, configDir,	...}: {
-		imports = with profiles.user;
-		[
-			alacritty
-			git
-			gtk
-			kitty
-			neovim
-			starship
-			tmux
-			yazi
-			zsh
-		];
+  home-manager.users."francisco" = { pkgs, configDir, ... }: {
+    imports = with profiles.user;
+      [
+        alacritty
+        git
+        gtk
+        kitty
+        neovim
+        starship
+        tmux
+        yazi
+        zsh
+      ];
 
-		home = 
-		{
-			username = "francisco";
-			homeDirectory = "/home/francisco";
-			stateVersion = "24.05";
-		};
+    home =
+      {
+        username = "francisco";
+        homeDirectory = "/home/francisco";
+        stateVersion = "24.05";
+      };
 
-		# Let Home Manager install and manage itself.
-		programs.home-manager.enable = true;
+    # Let Home Manager install and manage itself.
+    programs.home-manager.enable = true;
 
-		home.packages = requiredPackages;   
-	};
+    home.packages = requiredPackages;
+  };
 }

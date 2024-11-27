@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
 
-  catppuccin = pkgs.tmuxPlugins.mkTmuxPlugin 
+  catppuccin = pkgs.tmuxPlugins.mkTmuxPlugin
     {
       pluginName = "catppuccin";
       name = "catppuccin";
@@ -23,7 +23,7 @@ in
       {
         plugin = catppuccin;
         extraConfig = ''
-        set -g @catppuccin_flavour 'mocha' # latte,frappe, macchiato or mocha
+          set -g @catppuccin_flavour 'mocha' # latte,frappe, macchiato or mocha
         '';
       }
 
@@ -35,18 +35,18 @@ in
           set -g @tilish-default 'main-vertical'
         '';
       }
- 
+
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.yank
     ];
     extraConfig = ''
-      set -g mouse on
-			set-option -g default-terminal "screen-256color"
-			set-option -sa terminal-features ',alacritty:RGB'
-      set-window-option -g mode-keys vi
-      set -g base-index 1
-      setw -g pane-base-index 1
-      set -sg escape-time 0
+            set -g mouse on
+      			set-option -g default-terminal "screen-256color"
+      			set-option -sa terminal-features ',alacritty:RGB'
+            set-window-option -g mode-keys vi
+            set -g base-index 1
+            setw -g pane-base-index 1
+            set -sg escape-time 0
     '';
   };
 }

@@ -2,11 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{pkgs, profiles, ... }:
+{ pkgs, profiles, ... }:
 
 {
   imports = with profiles.environment;
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       desktop.gnome.default
     ];
 
@@ -40,7 +41,7 @@
   # Configure console keymap
   console.keyMap = "pt-latin1";
 
-	# Enable zsh
+  # Enable zsh
   programs.zsh.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -62,18 +63,18 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     #vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-		 tlp
-		 upower
-     wget
-     git
+    #vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    tlp
+    upower
+    wget
+    git
   ];
 
   # environment.interactiveShellInit = ''
   # 	neofetch
   # '';
 
-  
+
 
   # List services that you want to enable:
 

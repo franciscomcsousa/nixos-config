@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   programs.git = {
     enable = true;
     userEmail = "francisco.m.c.sousa@gmail.com";
@@ -8,9 +8,9 @@
       # url."git@github.com".pushinsteadOf = "https://github.com";
       color.ui = true;
       pull.rebase = true;
-			user.signingkey = "58677D63526D84FC";
-      commit.gpgsign = "true";	
+      user.signingkey = "58677D63526D84FC";
+      commit.gpgsign = "true";
       core.editor = "nvim";
-    };	
-	};
+    };
+  };
 }

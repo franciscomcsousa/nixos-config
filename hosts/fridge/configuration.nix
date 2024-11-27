@@ -7,10 +7,10 @@
 {
   imports = with profiles.environment;
     [
-			coolercontrol
+      coolercontrol
       nvidia
       desktop.gnome.autoLogin
-			tailscale
+      tailscale
     ];
 
   # Bootloader.
@@ -35,7 +35,7 @@
 
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
-  nix.nixPath = ["nixpkgs=/etc/channels/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" "/nix/var/nix/profiles/per-user/root/channels"];
+  nix.nixPath = [ "nixpkgs=/etc/channels/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" "/nix/var/nix/profiles/per-user/root/channels" ];
   environment.etc."channels/nixpkgs".source = inputs.nixpkgs.outPath;
 
   # Set your time zone.
@@ -52,15 +52,15 @@
     layout = "pt";
     variant = "nodeadkeys";
   };
-  
+
   # Configure console keymap
   console.keyMap = "pt-latin1";
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-	
-	# Enable zsh
-	programs.zsh.enable = true;
+
+  # Enable zsh
+  programs.zsh.enable = true;
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -77,12 +77,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     #vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-		wget
-		git
+    wget
+    git
   ];
 
   environment.interactiveShellInit = ''
-  	neofetch
+    	neofetch
   '';
 
   # List services that you want to enable:

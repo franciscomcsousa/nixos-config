@@ -6,9 +6,10 @@
 
 {
   imports = with profiles.environment;
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       desktop.gnome.default
-			tailscale
+      tailscale
     ];
 
   # Bootloader.
@@ -41,7 +42,7 @@
   # Configure console keymap
   console.keyMap = "pt-latin1";
 
-	# Enable zsh
+  # Enable zsh
   programs.zsh.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -63,16 +64,16 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     #vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     git
+    #vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    git
   ];
 
   # environment.interactiveShellInit = ''
   # 	neofetch
   # '';
 
-  
+
 
   # List services that you want to enable:
 

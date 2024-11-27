@@ -1,4 +1,4 @@
-{ pkgs, configDir, ...}: {
+{ pkgs, configDir, ... }: {
   gtk = {
     enable = true;
     iconTheme = {
@@ -13,5 +13,5 @@
     #  package = pkgs.graphite-cursors;
     #  name = "graphite-dark";
     #};
-	};
+  };
 }

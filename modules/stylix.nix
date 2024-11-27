@@ -1,8 +1,7 @@
-{
-pkgs,
-configDir,
-...
-}: 
+{ pkgs
+, configDir
+, ...
+}:
 {
   stylix = {
     enable = true;
@@ -11,7 +10,7 @@ configDir,
 
     fonts = {
       monospace = {
-        package = (pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];});
+        package = (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; });
         name = "JetBrainsMono Nerd Font Mono";
       };
 
@@ -27,14 +26,14 @@ configDir,
 
     };
 
-		opacity = {
-			terminal = 1.0;
-			applications = 1.0;
-			desktop = 1.0;
-			popups = 1.0;
-		};
-  
-		polarity = "dark";
+    opacity = {
+      terminal = 1.0;
+      applications = 1.0;
+      desktop = 1.0;
+      popups = 1.0;
+    };
+
+    polarity = "dark";
 
     cursor = {
       package = pkgs.bibata-cursors;

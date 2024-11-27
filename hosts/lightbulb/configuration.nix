@@ -6,10 +6,11 @@
 
 {
   imports = with profiles.environment;
-    [ # Include the results of the hardware scan.
-		  jellyfin
-			minecraft
-			tailscale
+    [
+      # Include the results of the hardware scan.
+      jellyfin
+      minecraft
+      tailscale
     ];
 
   # Bootloader.
@@ -52,24 +53,24 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     #vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     git
+    #vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    git
   ];
 
   # environment.interactiveShellInit = ''
   # 	neofetch
   # '';
 
-  
+
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh = {
-	  enable = true;
-		settings.PasswordAuthentication = false;
-	};
+    enable = true;
+    settings.PasswordAuthentication = false;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
