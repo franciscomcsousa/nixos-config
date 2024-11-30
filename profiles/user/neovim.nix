@@ -21,6 +21,7 @@
         nvim-lspconfig
         nvim-treesitter.withAllGrammars
         gitsigns-nvim
+				git-blame-nvim
         nvim-web-devicons
         alpha-nvim
         luasnip
@@ -38,6 +39,7 @@
                 ${builtins.readFile "${configDir}/neovim/plugin/comment.lua"}
         				${builtins.readFile "${configDir}/neovim/plugin/lualine.lua"}
         				${builtins.readFile "${configDir}/neovim/plugin/lsp.lua"}
+                ${builtins.readFile "${configDir}/neovim/plugin/git-blame.lua"}
                 ${builtins.readFile "${configDir}/neovim/plugin/git-signs.lua"}
                 ${builtins.readFile "${configDir}/neovim/plugin/navigator.lua"}
         				${builtins.readFile "${configDir}/neovim/plugin/neo-tree.lua"}
