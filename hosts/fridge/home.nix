@@ -4,6 +4,7 @@ let
     [
       bat
       bear
+			clang-tools
       discord
       exiftool
       firefox
@@ -24,6 +25,7 @@ let
       python3
       rclone
       ripgrep
+			steam
       spotify
       thunderbird
       unzip
