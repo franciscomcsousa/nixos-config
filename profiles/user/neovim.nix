@@ -21,7 +21,7 @@
         nvim-lspconfig
         nvim-treesitter.withAllGrammars
         gitsigns-nvim
-				git-blame-nvim
+        git-blame-nvim
         nvim-web-devicons
         alpha-nvim
         luasnip
