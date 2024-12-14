@@ -4,6 +4,7 @@ let
     [
       bat
       bear
+			brave
       clang-tools
       discord
       exiftool

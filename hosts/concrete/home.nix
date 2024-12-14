@@ -3,6 +3,7 @@ let
   requiredPackages = with pkgs;
     [
       bat
+			brave
       discord
       exiftool
       firefox
