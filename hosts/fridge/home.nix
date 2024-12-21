@@ -2,6 +2,7 @@
 let
   requiredPackages = with pkgs;
     [
+			audacity
       bat
       bear
       brave
