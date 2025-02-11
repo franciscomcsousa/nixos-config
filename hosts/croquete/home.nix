@@ -10,15 +10,16 @@ let
       fzf
       gcc
       go
-			mutter
       gnumake
       jetbrains.idea-ultimate
-			libreoffice-still
+      libreoffice-still
+      mutter
       neofetch
       nodejs_22
       obs-studio
       obsidian
       openjdk
+      prismlauncher
       python3
       rclone
       ripgrep
@@ -47,7 +48,7 @@ in
         gtk
         kitty
         neovim
-				scalling
+        scalling
         starship
         tmux
         yazi

@@ -9,8 +9,9 @@
     [
       # Include the results of the hardware scan.
       desktop.gnome.default
+      steam
       tailscale
-			fingerprint
+      fingerprint
     ];
 
   # Bootloader.
@@ -69,6 +70,7 @@
     wget
     git
   ];
+
 
   # environment.interactiveShellInit = ''
   # 	neofetch

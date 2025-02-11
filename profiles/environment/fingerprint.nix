@@ -1,9 +1,9 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-		fprintd
+    fprintd
     libfprint
   ];
-	
-	services.fprintd.enable = true;
+
+  services.fprintd.enable = true;
 }
