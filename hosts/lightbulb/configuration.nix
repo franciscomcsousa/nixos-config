@@ -11,6 +11,7 @@
       jellyfin
       minecraft
       tailscale
+			printer-purge
     ];
 
   # Bootloader.
