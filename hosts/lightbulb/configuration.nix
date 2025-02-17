@@ -12,6 +12,7 @@
       minecraft
       tailscale
 			printer-purge
+			exit-node
     ];
 
   # Bootloader.
@@ -71,6 +72,12 @@
   services.openssh = {
     enable = true;
     settings.PasswordAuthentication = false;
+  };
+
+  fileSystems."/external-drive" = {
+    device = "/dev/disk/by-uuid/0ACC5602CC55E909";
+    fsType = "ntfs3";
+    options = [ "defaults" "nofail"];
   };
 
   # Open ports in the firewall.
