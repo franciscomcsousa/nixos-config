@@ -17,6 +17,7 @@ let
       gnumake
       inkscape
       jetbrains.idea-ultimate
+			jetbrains.pycharm-professional
       neofetch
       jre8
       nodejs_22
