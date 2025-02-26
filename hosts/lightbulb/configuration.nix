@@ -11,8 +11,8 @@
       jellyfin
       minecraft
       tailscale
-			printer-purge
-			exit-node
+      printer-purge
+      exit-node
     ];
 
   # Bootloader.
@@ -77,7 +77,7 @@
   fileSystems."/external-drive" = {
     device = "/dev/disk/by-uuid/0ACC5602CC55E909";
     fsType = "ntfs3";
-    options = [ "defaults" "nofail"];
+    options = [ "defaults" "nofail" ];
   };
 
   # Open ports in the firewall.

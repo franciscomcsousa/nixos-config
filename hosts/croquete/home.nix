@@ -12,13 +12,10 @@ let
       go
       gnumake
       jetbrains.idea-ultimate
-<<<<<<< Updated upstream
+      jetbrains.pycharm-professional
       libreoffice-still
       mutter
-=======
-			jetbrains.pycharm-professional
-			libreoffice-still
->>>>>>> Stashed changes
+      libreoffice-still
       neofetch
       nodejs_22
       obs-studio

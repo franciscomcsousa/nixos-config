@@ -1,5 +1,5 @@
 { ... }: {
-	systemd.services.print-job = {
+  systemd.services.print-job = {
     description = "Purge Printer";
     wants = [ "network-online.target" ];
     after = [ "network-online.target" ];
