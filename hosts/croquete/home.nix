@@ -14,6 +14,7 @@ let
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
       libreoffice-still
+			mattermost-desktop
       mutter
       libreoffice-still
       neofetch

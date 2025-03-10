@@ -18,6 +18,7 @@ let
       inkscape
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
+			mattermost-desktop
       neofetch
       jre8
       nodejs_22
