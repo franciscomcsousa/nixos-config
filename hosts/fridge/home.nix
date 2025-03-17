@@ -15,6 +15,7 @@ let
       gdb
       go
       gnumake
+			handbrake
       inkscape
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional

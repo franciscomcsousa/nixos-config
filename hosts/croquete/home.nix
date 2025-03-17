@@ -11,6 +11,7 @@ let
       gcc
       go
       gnumake
+			handbrake
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
       libreoffice-still
