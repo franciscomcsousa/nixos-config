@@ -13,6 +13,7 @@ let
       fzf
       gcc
       gdb
+			gimp
       go
       gnumake
 			handbrake

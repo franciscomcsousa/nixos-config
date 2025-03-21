@@ -9,6 +9,7 @@ let
       firefox
       fzf
       gcc
+			gimp
       go
       gnumake
 			handbrake
