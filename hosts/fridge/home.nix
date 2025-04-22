@@ -18,6 +18,7 @@ let
       gnumake
 			handbrake
       inkscape
+      libreoffice-still
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
 			mattermost-desktop

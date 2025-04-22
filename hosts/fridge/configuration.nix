@@ -12,6 +12,7 @@
       desktop.gnome.autoLogin
       steam
       tailscale
+			xbox
     ];
 
   # Bootloader.
