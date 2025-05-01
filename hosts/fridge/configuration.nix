@@ -32,8 +32,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+	virtualisation.docker.enable = true;
+
   # Use in modules/nixconf.nix
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" "docker" ];
 
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
