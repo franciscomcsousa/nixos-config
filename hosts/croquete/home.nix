@@ -31,6 +31,7 @@ let
       spotify
       thunderbird
       unzip
+			vagrant
       vscode
       zip
       zoom-us

@@ -32,10 +32,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-	virtualisation.docker.enable = true;
-
   # Use in modules/nixconf.nix
-  nix.settings.experimental-features = [ "nix-command" "flakes" "docker" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
@@ -66,12 +64,17 @@
   # Enable zsh
   programs.zsh.enable = true;
 
+	# Virtualisation
+	virtualisation = {
+		docker.enable = true;
+		virtualbox.host.enable = true;
+	};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.francisco = {
     isNormalUser = true;
     description = "Francisco";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "user-with-access-to-virtualbox" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
     ];

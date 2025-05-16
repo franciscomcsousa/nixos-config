@@ -50,13 +50,17 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-	virtualisation.docker.enable = true;
+	# Virtualization
+	virtualisation = {
+		docker.enable = true;
+		virtualbox.host.enable = true;
+	};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.francisco = {
     isNormalUser = true;
     description = "Francisco";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "user-with-access-to-virtualbox" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
     ];
