@@ -53,6 +53,7 @@
 	# Virtualization
 	virtualisation = {
 		docker.enable = true;
+		docker.liveRestore = false;
 		virtualbox.host.enable = true;
 	};
 
