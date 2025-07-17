@@ -12,6 +12,7 @@
       steam
       tailscale
       fingerprint
+			flatpak
     ];
 
   # Bootloader.

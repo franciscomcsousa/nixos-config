@@ -13,6 +13,7 @@
       steam
       tailscale
 			xbox
+			flatpak
     ];
 
   # Bootloader.
