@@ -28,7 +28,7 @@ let
       python3
       rclone
       ripgrep
-      spotify
+      unstable.spotify
       thunderbird
       unzip
 			vagrant
