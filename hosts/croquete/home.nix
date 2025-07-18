@@ -11,6 +11,7 @@ let
       gcc
 			gimp
       go
+			gnomeExtensions.battery-health-charging
       gnumake
 			handbrake
       jetbrains.idea-ultimate
