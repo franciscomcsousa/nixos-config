@@ -10,7 +10,7 @@
 
     fonts = {
       monospace = {
-				package = pkgs.nerd-fonts.jetbrains-mono;
+        package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrainsMono Nerd Font Mono";
       };
 
@@ -38,7 +38,7 @@
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Classic";
-			size = 24;
+      size = 24;
     };
   };
 }

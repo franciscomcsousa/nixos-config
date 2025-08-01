@@ -1,6 +1,6 @@
-{config, ...}:
+{ config, ... }:
 {
-	# Enable Bluetooth
+  # Enable Bluetooth
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -16,10 +16,10 @@
     };
   };
 
-	services.blueman.enable = true;
-	hardware.xpadneo.enable = true;
+  services.blueman.enable = true;
+  hardware.xpadneo.enable = true;
 
-	boot = {
+  boot = {
     extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
     extraModprobeConfig = ''
       options bluetooth disable_ertm=Y

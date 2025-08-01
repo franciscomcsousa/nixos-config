@@ -5,9 +5,9 @@
       profiles.environment.desktop.gnome.default
     ];
 
-	environment.systemPackages = with pkgs; [
-		gnomeExtensions.display-configuration-switcher
-		gnomeExtensions.vitals
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.display-configuration-switcher
+    gnomeExtensions.vitals
     gnome-tweaks
   ];
 

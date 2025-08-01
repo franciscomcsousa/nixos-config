@@ -12,8 +12,8 @@
       desktop.gnome.autoLogin
       steam
       tailscale
-			xbox
-			flatpak
+      xbox
+      flatpak
     ];
 
   # Bootloader.
@@ -65,12 +65,12 @@
   # Enable zsh
   programs.zsh.enable = true;
 
-	# Virtualisation
-	virtualisation = {
-		docker.enable = true;
-		docker.liveRestore = false;
-		virtualbox.host.enable = true;
-	};
+  # Virtualisation
+  virtualisation = {
+    docker.enable = true;
+    docker.liveRestore = false;
+    virtualbox.host.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.francisco = {

@@ -9,15 +9,15 @@ let
       firefox
       fzf
       gcc
-			gimp
+      gimp
       go
-			gnomeExtensions.battery-health-charging
+      gnomeExtensions.battery-health-charging
       gnumake
-			handbrake
+      handbrake
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
       libreoffice-still
-			mattermost-desktop
+      mattermost-desktop
       mutter
       libreoffice-still
       neofetch
@@ -30,9 +30,10 @@ let
       rclone
       ripgrep
       unstable.spotify
+      texliveFull
       thunderbird
       unzip
-			vagrant
+      vagrant
       vscode
       zip
       zoom-us

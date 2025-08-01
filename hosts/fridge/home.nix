@@ -13,15 +13,15 @@ let
       fzf
       gcc
       gdb
-			gimp
+      gimp
       go
       gnumake
-			handbrake
+      handbrake
       inkscape
       libreoffice-still
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
-			mattermost-desktop
+      mattermost-desktop
       neofetch
       jre8
       nodejs_22
@@ -33,9 +33,10 @@ let
       rclone
       ripgrep
       unstable.spotify
+      texliveFull
       thunderbird
       unzip
-			vagrant
+      vagrant
       vscode
       zip
       zoom-us
