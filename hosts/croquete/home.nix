@@ -12,8 +12,10 @@ let
       gimp
       go
       gnomeExtensions.battery-health-charging
+			gnomeExtensions.dynamic-panel
       gnumake
       handbrake
+			inkscape
       jetbrains.idea-ultimate
       jetbrains.pycharm-professional
       libreoffice-still
