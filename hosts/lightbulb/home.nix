@@ -7,6 +7,7 @@ let
       fzf
       mcrcon
       neofetch
+			lynx
       python3
       rclone
       ripgrep

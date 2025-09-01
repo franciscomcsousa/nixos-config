@@ -5,7 +5,7 @@
     after = [ "network-online.target" ];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = [ "/run/current-system/sw/bin/lpr -P EPSON_ET_2850_Series /home/francisco/printer_purge_page.pdf" ];
+      ExecStart = [ "/run/current-system/sw/bin/lpr -P EPSON_ET-2850_Series /home/francisco/printer_purge_page.pdf" ];
     };
   };
 
