@@ -33,7 +33,7 @@ let
       rclone
       ripgrep
       unstable.spotify
-      texliveFull
+      unstable.texliveFull
       thunderbird
       unzip
       vagrant
