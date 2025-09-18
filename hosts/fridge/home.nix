@@ -38,6 +38,7 @@ let
       unzip
       vagrant
       vscode
+			waydroid
       zip
       zoom-us
     ];

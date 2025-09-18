@@ -17,5 +17,5 @@
     autoLogin.user = "francisco";
 
   };
-  services.xserver.displayManager.gdm.wayland = false;
+  # services.xserver.displayManager.gdm.wayland = false;
 }

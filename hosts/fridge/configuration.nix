@@ -14,6 +14,7 @@
       tailscale
       xbox
       flatpak
+			waydroid
     ];
 
   # Bootloader.
