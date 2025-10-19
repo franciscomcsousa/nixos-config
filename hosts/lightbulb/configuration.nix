@@ -5,15 +5,14 @@
 { config, pkgs, lib, inputs, profiles, ... }:
 
 {
-  imports = with profiles.environment;
-    [
-      # Include the results of the hardware scan.
-      jellyfin
-      minecraft
-      tailscale
-      printer-purge
-      exit-node
-    ];
+  imports = with profiles.environment; [
+    # Include the results of the hardware scan.
+    jellyfin
+    minecraft
+    tailscale
+    printer-purge
+    exit-node
+  ];
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -47,8 +46,7 @@
     description = "Francisco";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -65,8 +63,6 @@
   # environment.interactiveShellInit = ''
   # 	neofetch
   # '';
-
-
 
   # List services that you want to enable:
 

@@ -5,12 +5,11 @@
 { config, pkgs, lib, inputs, profiles, ... }:
 
 {
-  imports = with profiles.environment;
-    [
-      # Include the results of the hardware scan.
-      desktop.gnome.default
-      tailscale
-    ];
+  imports = with profiles.environment; [
+    # Include the results of the hardware scan.
+    desktop.gnome.default
+    tailscale
+  ];
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -54,8 +53,7 @@
     description = "Francisco";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -72,8 +70,6 @@
   # environment.interactiveShellInit = ''
   # 	neofetch
   # '';
-
-
 
   # List services that you want to enable:
 

@@ -1,13 +1,10 @@
-{ ...
-}: {
+{ ... }: {
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
     enableCompletion = true;
     autocd = true;
-    syntaxHighlighting = {
-      enable = true;
-    };
+    syntaxHighlighting = { enable = true; };
 
     oh-my-zsh = {
       enable = true;
@@ -15,7 +12,8 @@
     };
 
     shellAliases = {
-      onedrive = "rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive > /dev/null 2>&1 &!";
+      onedrive =
+        "rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive > /dev/null 2>&1 &!";
       open = "xdg-open";
     };
   };

@@ -1,20 +1,18 @@
 { pkgs, ... }:
 let
 
-  catppuccin = pkgs.tmuxPlugins.mkTmuxPlugin
-    {
-      pluginName = "catppuccin";
-      name = "catppuccin";
-      src = pkgs.fetchFromGitHub {
-        owner = "catppuccin";
-        repo = "tmux";
-        rev = "e7cd05facc22c18fbab3f718d8ecd6494538fe38";
-        sha256 = "sha256-Sz5o4redRQYNiniwTeFhndGXerVBNGrza6GcKziLdQc=";
-      };
+  catppuccin = pkgs.tmuxPlugins.mkTmuxPlugin {
+    pluginName = "catppuccin";
+    name = "catppuccin";
+    src = pkgs.fetchFromGitHub {
+      owner = "catppuccin";
+      repo = "tmux";
+      rev = "e7cd05facc22c18fbab3f718d8ecd6494538fe38";
+      sha256 = "sha256-Sz5o4redRQYNiniwTeFhndGXerVBNGrza6GcKziLdQc=";
     };
+  };
 
-in
-{
+in {
   programs.tmux = {
     enable = true;
     historyLimit = 100000;

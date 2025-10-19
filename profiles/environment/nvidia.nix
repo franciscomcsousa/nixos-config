@@ -1,13 +1,6 @@
-{ config, lib, pkgs, ... }:
-{
-  environment.systemPackages = with pkgs; [
-    unstable.linuxKernel.packages.linux_zen.nvidia_x11
-  ];
-
+{ config, lib, pkgs, ... }: {
   # Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-  };
+  hardware.graphics = { enable = true; };
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -36,6 +29,6 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 }

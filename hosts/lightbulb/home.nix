@@ -1,41 +1,36 @@
 { pkgs, profiles, configDir, ... }:
 let
-  requiredPackages = with pkgs;
-    [
-      bat
-      exiftool
-      fzf
-      mcrcon
-      neofetch
-			lynx
-      python3
-      rclone
-      ripgrep
-      unzip
-      zip
-    ];
-in
-{
+  requiredPackages = with pkgs; [
+    bat
+    exiftool
+    fzf
+    mcrcon
+    neofetch
+    lynx
+    python3
+    rclone
+    ripgrep
+    unzip
+    zip
+  ];
+in {
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    extraSpecialArgs = {
-      inherit configDir;
-    };
+    extraSpecialArgs = { inherit configDir; };
   };
 
   home-manager.users."francisco" = { pkgs, configDir, ... }: {
-    imports = with profiles.user;
-      [
-        alacritty
-        git
-        kitty
-        neovim
-        starship
-        tmux
-        yazi
-        zsh
-      ];
+    imports = with profiles.user; [
+      alacritty
+      git
+      kitty
+      neovim
+      starship
+      tmux
+      yazi
+      zsh
+    ];
 
     home = {
       username = "francisco";

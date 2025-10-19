@@ -5,17 +5,17 @@
 { pkgs, inputs, profiles, ... }:
 
 {
-  imports = with profiles.environment;
-    [
-      coolercontrol
-      nvidia
-      desktop.gnome.autoLogin
-      steam
-      tailscale
-      xbox
-      flatpak
-			waydroid
-    ];
+  imports = with profiles.environment; [
+    coolercontrol
+    openrgb
+    nvidia
+    desktop.gnome.autoLogin
+    steam
+    tailscale
+    xbox
+    flatpak
+    waydroid
+  ];
 
   # Bootloader.
   # boot.loader.systemd-boot.enable = true;
@@ -39,7 +39,11 @@
 
   nix.registry.nixpkgs.flake = inputs.nixpkgs;
 
-  nix.nixPath = [ "nixpkgs=/etc/channels/nixpkgs" "nixos-config=/etc/nixos/configuration.nix" "/nix/var/nix/profiles/per-user/root/channels" ];
+  nix.nixPath = [
+    "nixpkgs=/etc/channels/nixpkgs"
+    "nixos-config=/etc/nixos/configuration.nix"
+    "/nix/var/nix/profiles/per-user/root/channels"
+  ];
   environment.etc."channels/nixpkgs".source = inputs.nixpkgs.outPath;
 
   # Set your time zone.
@@ -77,10 +81,10 @@
   users.users.francisco = {
     isNormalUser = true;
     description = "Francisco";
-    extraGroups = [ "networkmanager" "wheel" "docker" "user-with-access-to-virtualbox" ];
+    extraGroups =
+      [ "networkmanager" "wheel" "docker" "user-with-access-to-virtualbox" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [ ];
   };
 
   # List packages installed in system profile. To search, run:
@@ -92,7 +96,7 @@
   ];
 
   environment.interactiveShellInit = ''
-    	neofetch
+    neofetch
   '';
 
   # List services that you want to enable:

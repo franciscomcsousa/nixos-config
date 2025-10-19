@@ -1,9 +1,5 @@
-{ pkgs, profiles, ... }:
-{
-  imports =
-    [
-      profiles.environment.desktop.gnome.default
-    ];
+{ pkgs, profiles, ... }: {
+  imports = [ profiles.environment.desktop.gnome.default ];
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.display-configuration-switcher

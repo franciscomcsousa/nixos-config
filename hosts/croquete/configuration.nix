@@ -5,15 +5,14 @@
 { config, pkgs, lib, inputs, profiles, ... }:
 
 {
-  imports = with profiles.environment;
-    [
-      # Include the results of the hardware scan.
-      desktop.gnome.default
-      steam
-      tailscale
-      fingerprint
-      flatpak
-    ];
+  imports = with profiles.environment; [
+    # Include the results of the hardware scan.
+    desktop.gnome.default
+    steam
+    tailscale
+    fingerprint
+    flatpak
+  ];
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -62,10 +61,10 @@
   users.users.francisco = {
     isNormalUser = true;
     description = "Francisco";
-    extraGroups = [ "networkmanager" "wheel" "docker" "user-with-access-to-virtualbox" ];
+    extraGroups =
+      [ "networkmanager" "wheel" "docker" "user-with-access-to-virtualbox" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -79,12 +78,9 @@
     git
   ];
 
-
   # environment.interactiveShellInit = ''
   # 	neofetch
   # '';
-
-
 
   # List services that you want to enable:
 

@@ -53,8 +53,7 @@
     description = "Francisco";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -73,8 +72,6 @@
   # environment.interactiveShellInit = ''
   # 	neofetch
   # '';
-
-
 
   # List services that you want to enable:
 
