@@ -1,4 +1,5 @@
-{ pkgs, configDir, ... }: {
+{ pkgs, configDir, ... }:
+{
   gtk = {
     enable = true;
     iconTheme = {

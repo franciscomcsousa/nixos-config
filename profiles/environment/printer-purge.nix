@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   systemd.services.print-job = {
     description = "Purge Printer";
     wants = [ "network-online.target" ];

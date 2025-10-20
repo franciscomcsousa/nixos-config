@@ -1,4 +1,5 @@
-{ configDir, pkgs, ... }: {
+{ configDir, pkgs, ... }:
+{
   programs.neovim = {
     enable = true;
 

@@ -2,7 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, inputs, profiles, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  profiles,
+  ...
+}:
 
 {
   imports = with profiles.environment; [
@@ -27,7 +34,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Set your time zone.
   time.timeZone = "Europe/Lisbon";
@@ -61,8 +71,12 @@
   users.users.francisco = {
     isNormalUser = true;
     description = "Francisco";
-    extraGroups =
-      [ "networkmanager" "wheel" "docker" "user-with-access-to-virtualbox" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+      "user-with-access-to-virtualbox"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
   };

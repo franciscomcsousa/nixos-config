@@ -10,10 +10,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = { url = "github:danth/stylix/release-25.05"; };
+    stylix = {
+      url = "github:danth/stylix/release-25.05";
+    };
   };
 
-  outputs = { ... }@inputs:
+  outputs =
+    { ... }@inputs:
     let
       inherit (inputs.nixpkgs) lib;
       inherit (inputs.home.nixosModules) home-manager;
@@ -21,28 +24,37 @@
       system = "x86_64-linux";
       user = "francisco";
 
-      pkgs = let
-        args = {
-          inherit system;
-          config.allowUnfree = true;
-        };
-      in import inputs.nixpkgs (args // {
-        overlays = [
-          (_final: _prev: { unstable = import inputs.nixpkgs-unstable args; })
-        ];
-      });
+      pkgs =
+        let
+          args = {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        in
+        import inputs.nixpkgs (
+          args
+          // {
+            overlays = [
+              (_final: _prev: { unstable = import inputs.nixpkgs-unstable args; })
+            ];
+          }
+        );
 
-      importRecursive = dir:
-        let entries = lib.filesystem.listFilesRecursive dir;
-        in if (builtins.pathExists dir) then
-          builtins.map (entry: (import entry))
-          (builtins.filter (entry: lib.hasSuffix ".nix" entry) entries)
+      importRecursive =
+        dir:
+        let
+          entries = lib.filesystem.listFilesRecursive dir;
+        in
+        if (builtins.pathExists dir) then
+          builtins.map (entry: (import entry)) (builtins.filter (entry: lib.hasSuffix ".nix" entry) entries)
         else
           [ ];
 
-      mkProfiles = dir:
+      mkProfiles =
+        dir:
         let
-          mkLevel = entry: type:
+          mkLevel =
+            entry: type:
             if (lib.hasSuffix ".nix" entry && type == "regular") then
               (import "${dir}/${entry}")
             else if type == "directory" then
@@ -50,12 +62,12 @@
             else
               { };
 
-          doMagic = key: value:
-            lib.attrsets.nameValuePair (lib.removeSuffix ".nix" key)
-            (mkLevel key value);
-        in lib.attrsets.mapAttrs' doMagic (builtins.readDir dir);
+          doMagic = key: value: lib.attrsets.nameValuePair (lib.removeSuffix ".nix" key) (mkLevel key value);
+        in
+        lib.attrsets.mapAttrs' doMagic (builtins.readDir dir);
 
-      mkHost = { name, dir, }:
+      mkHost =
+        { name, dir }:
         lib.nixosSystem {
           inherit system;
           inherit pkgs;
@@ -69,21 +81,26 @@
             { networking.hostName = name; }
             home-manager
             inputs.stylix.nixosModules.stylix
-          ] ++ (importRecursive dir) ++ (importRecursive ./modules);
+          ]
+          ++ (importRecursive dir)
+          ++ (importRecursive ./modules);
         };
 
-      mkHosts = dir:
+      mkHosts =
+        dir:
         let
-          filterHosts = hosts:
-            lib.attrsets.filterAttrs (key: value: value == "directory") hosts;
-        in lib.attrsets.mapAttrs (entry: type:
+          filterHosts = hosts: lib.attrsets.filterAttrs (key: value: value == "directory") hosts;
+        in
+        lib.attrsets.mapAttrs (
+          entry: type:
           mkHost {
             name = entry;
             dir = "${dir}/${entry}";
-          }) (filterHosts (builtins.readDir dir));
-    in {
+          }
+        ) (filterHosts (builtins.readDir dir));
+    in
+    {
       nixosConfigurations = mkHosts ./hosts;
-      formatter.x86_64-linux =
-        inputs.nixpkgs.legacyPackages.x86_64-linux.alejandra;
+      formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.alejandra;
     };
 }

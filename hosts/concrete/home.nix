@@ -1,4 +1,9 @@
-{ pkgs, profiles, configDir, ... }:
+{
+  pkgs,
+  profiles,
+  configDir,
+  ...
+}:
 let
   requiredPackages = with pkgs; [
     bat
@@ -26,35 +31,38 @@ let
     zip
     zoom-us
   ];
-in {
+in
+{
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = { inherit configDir; };
   };
 
-  home-manager.users."francisco" = { pkgs, configDir, ... }: {
-    imports = with profiles.user; [
-      alacritty
-      git
-      gtk
-      kitty
-      neovim
-      starship
-      tmux
-      yazi
-      zsh
-    ];
+  home-manager.users."francisco" =
+    { pkgs, configDir, ... }:
+    {
+      imports = with profiles.user; [
+        alacritty
+        git
+        gtk
+        kitty
+        neovim
+        starship
+        tmux
+        yazi
+        zsh
+      ];
 
-    home = {
-      username = "francisco";
-      homeDirectory = "/home/francisco";
-      stateVersion = "24.05";
+      home = {
+        username = "francisco";
+        homeDirectory = "/home/francisco";
+        stateVersion = "24.05";
+      };
+
+      # Let Home Manager install and manage itself.
+      programs.home-manager.enable = true;
+
+      home.packages = requiredPackages;
     };
-
-    # Let Home Manager install and manage itself.
-    programs.home-manager.enable = true;
-
-    home.packages = requiredPackages;
-  };
 }

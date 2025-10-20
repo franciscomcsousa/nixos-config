@@ -5,11 +5,10 @@
 { pkgs, profiles, ... }:
 
 {
-  imports = with profiles.environment;
-    [
-      # Include the results of the hardware scan.
-      desktop.gnome.default
-    ];
+  imports = with profiles.environment; [
+    # Include the results of the hardware scan.
+    desktop.gnome.default
+  ];
 
   # Bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
@@ -24,7 +23,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Set your time zone.
   time.timeZone = "Europe/Lisbon";
@@ -51,7 +53,10 @@
   users.users.francisco = {
     isNormalUser = true;
     description = "Francisco";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
   };

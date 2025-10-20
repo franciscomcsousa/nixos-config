@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.git = {
     enable = true;
     userEmail = "francisco.m.c.sousa@gmail.com";

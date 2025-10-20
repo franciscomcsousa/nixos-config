@@ -1,4 +1,5 @@
-{ pkgs, profiles, ... }: {
+{ pkgs, profiles, ... }:
+{
   imports = [ profiles.environment.desktop.gnome.default ];
 
   environment.systemPackages = with pkgs; [
