@@ -2,9 +2,9 @@
 {
   programs.git = {
     enable = true;
-    userEmail = "francisco.m.c.sousa@gmail.com";
-    userName = "franciscomcsousa";
-    extraConfig = {
+    settings = {
+      user.email = "francisco.m.c.sousa@gmail.com";
+      user.name = "franciscomcsousa";
       init.defaultBranch = "main";
       # url."git@github.com".pushinsteadOf = "https://github.com";
       color.ui = true;
