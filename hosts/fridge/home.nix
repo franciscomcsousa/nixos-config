@@ -83,5 +83,10 @@ in
       programs.home-manager.enable = true;
 
       home.packages = requiredPackages;
+
+      home.sessionVariables = {
+        OZONE_PLATFORM = "wayland";
+        ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+      };
     };
 }
