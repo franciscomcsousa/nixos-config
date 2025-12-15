@@ -9,6 +9,7 @@
   services.avahi = {
     enable = true;
     nssmdns4 = true; # Enable mDNS hostname resolution
+    openFirewall = true;
   };
 
 }

@@ -19,6 +19,7 @@
     tailscale
     printer-purge
     exit-node
+    librespot
   ];
 
   # Bootloader.
@@ -58,6 +59,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "audio"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
