@@ -11,7 +11,6 @@
 
 {
   imports = with profiles.environment; [
-    coolercontrol
     openrgb
     nvidia
     desktop.gnome.autoLogin
@@ -80,8 +79,10 @@
 
   # Virtualisation
   virtualisation = {
-    docker.enable = true;
-    docker.liveRestore = false;
+    docker = {
+      enable = true;
+      liveRestore = false;
+    };
     virtualbox.host.enable = true;
   };
 

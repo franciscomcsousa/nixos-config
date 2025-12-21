@@ -62,8 +62,10 @@
 
   # Virtualization
   virtualisation = {
-    docker.enable = true;
-    docker.liveRestore = false;
+    docker = {
+      enable = true;
+      liveRestore = false;
+    };
     virtualbox.host.enable = true;
   };
 
