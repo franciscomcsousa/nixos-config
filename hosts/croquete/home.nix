@@ -9,6 +9,7 @@ let
     bat
     brave
     discord
+    evince
     exiftool
     firefox
     fzf

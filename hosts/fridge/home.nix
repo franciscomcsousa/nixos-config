@@ -12,6 +12,7 @@ let
     brave
     clang-tools
     discord
+    evince
     exiftool
     firefox
     fzf
