@@ -24,7 +24,7 @@ let
     handbrake
     inkscape
     libreoffice-still
-    liquidctl
+    lutris
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
     mattermost-desktop
