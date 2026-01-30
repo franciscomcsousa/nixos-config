@@ -40,6 +40,7 @@ let
     unstable.spotify
     unstable.texliveFull
     thunderbird
+    tree
     unzip
     vagrant
     vscode
