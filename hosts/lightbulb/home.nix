@@ -9,6 +9,8 @@ let
     bat
     exiftool
     fzf
+		gcc
+		go
     mcrcon
     neofetch
     lynx
