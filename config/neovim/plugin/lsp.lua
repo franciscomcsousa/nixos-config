@@ -38,10 +38,19 @@ require("neodev").setup({
 	end,
 })
 -- lspconfig
-local lspconfig = require('lspconfig')
+vim.lsp.enable({
+	servers = {
+		"lua_ls",
+		"clangd",
+		"nil_ls",
+		"pyright",
+		"gopls",
+		"ts_ls",
+	},
+})
 
 -- lua_ls: Lua
-lspconfig.lua_ls.setup {
+vim.lsp.config("lua_ls", {
 	on_attach = on_attach,
 	capabilities = capabilities,
 	root_dir = function()
@@ -54,34 +63,33 @@ lspconfig.lua_ls.setup {
 			telemetry = { enable = false },
 		},
 	}
-}
+})
 
 -- clangd: C
-lspconfig.clangd.setup {
+vim.lsp.config("clangd", {
 	capabilities = capabilities,
 	on_attach = on_attach
-}
+})
 
 -- nil_ls: Nix
-lspconfig.nil_ls.setup {
+vim.lsp.config("nil_ls", {
 	capabilities = capabilities,
 	on_attach = on_attach
-}
+})
 
 -- pyright: Python
-lspconfig.pyright.setup {
+vim.lsp.config("pyright", {
 	capabilities = capabilities,
 	on_attach = on_attach
-}
-
+})
 -- gopls: Go
-lspconfig.gopls.setup {
+vim.lsp.config("gopls", {
 	capabilities = capabilities,
 	on_attach = on_attach
-}
+})
 
 -- tsserver: Typescript
-lspconfig.ts_ls.setup {
+vim.lsp.config("ts_ls", {
 	capabilities = capabilities,
 	on_attach = on_attach
-}
+})
