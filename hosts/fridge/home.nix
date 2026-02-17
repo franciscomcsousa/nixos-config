@@ -31,7 +31,7 @@ let
     nixfmt-rfc-style
     neofetch
     jre8
-    nodejs_22
+    nodejs_24
     obs-studio
     obsidian
     openrgb-with-all-plugins

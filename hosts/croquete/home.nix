@@ -29,7 +29,7 @@ let
     nixfmt-rfc-style
     libreoffice-still
     neofetch
-    nodejs_22
+    nodejs_24
     obs-studio
     obsidian
     openjdk

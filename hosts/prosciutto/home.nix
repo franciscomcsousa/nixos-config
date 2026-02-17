@@ -15,7 +15,7 @@ let
     go
     jetbrains.idea-ultimate
     neofetch
-    nodejs_22
+    nodejs_24
     obs-studio
     obsidian
     openjdk
