@@ -14,6 +14,7 @@ let
     discord
     evince
     exiftool
+    fastfetch
     firefox
     fzf
     gcc
@@ -22,19 +23,20 @@ let
     go
     gnumake
     handbrake
+    htop
     inkscape
     libreoffice-still
     lutris
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
+    magic-wormhole
     mattermost-desktop
     nixfmt-rfc-style
-    neofetch
     jre8
+    ncdu
     nodejs_24
     obs-studio
     obsidian
-    openrgb-with-all-plugins
     unstable.prismlauncher
     python3
     rclone

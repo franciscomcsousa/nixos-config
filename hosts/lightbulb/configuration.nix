@@ -14,7 +14,7 @@
 {
   imports = with profiles.environment; [
     # Include the results of the hardware scan.
-		discord-bot
+    discord-bot
     jellyfin
     minecraft
     tailscale

@@ -8,11 +8,14 @@ let
   requiredPackages = with pkgs; [
     bat
     exiftool
+    fastfetch
     fzf
-		gcc
-		go
+    gcc
+    go
+    htop
+    magic-wormhole
     mcrcon
-    neofetch
+    ncdu
     lynx
     python3
     rclone

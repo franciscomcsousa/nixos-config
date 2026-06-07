@@ -10,13 +10,13 @@ let
     brave
     discord
     exiftool
+    fastfetch
     firefox
     fzf
     gcc
     go
     gnumake
     jetbrains.idea-ultimate
-    neofetch
     nodejs_24
     obs-studio
     obsidian

@@ -109,7 +109,7 @@
   ];
 
   environment.interactiveShellInit = ''
-    neofetch
+    fastfetch
   '';
 
   # List services that you want to enable:

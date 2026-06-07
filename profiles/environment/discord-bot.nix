@@ -5,9 +5,12 @@
     wants = [ "network-online.target" ];
     after = [ "network-online.target" ];
     wantedBy = [ "multi-user.target" ];
-    
-    path = with pkgs; [ go gcc ];
-    
+
+    path = with pkgs; [
+      go
+      gcc
+    ];
+
     serviceConfig = {
       Type = "simple";
       User = "francisco";
@@ -16,7 +19,7 @@
       ExecStart = "${pkgs.go}/bin/go run ./cmd/bot";
       Restart = "always";
       RestartSec = "10";
-      
+
       NoNewPrivileges = true;
       PrivateTmp = true;
     };

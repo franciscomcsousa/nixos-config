@@ -11,6 +11,7 @@ let
     discord
     evince
     exiftool
+    fastfetch
     firefox
     fzf
     gcc
@@ -20,15 +21,17 @@ let
     gnomeExtensions.dynamic-panel
     gnumake
     handbrake
+    htop
     inkscape
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
     libreoffice-still
+    magic-wormhole
     mattermost-desktop
     mutter
+    ncdu
     nixfmt-rfc-style
     libreoffice-still
-    neofetch
     nodejs_24
     obs-studio
     obsidian
