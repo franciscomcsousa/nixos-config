@@ -16,7 +16,7 @@ let
     gcc
     go
     gnumake
-    jetbrains.idea-ultimate
+    jetbrains.idea
     nodejs_24
     obs-studio
     obsidian

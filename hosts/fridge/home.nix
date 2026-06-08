@@ -27,8 +27,8 @@ let
     inkscape
     libreoffice-still
     lutris
-    jetbrains.idea-ultimate
-    jetbrains.pycharm-professional
+    jetbrains.idea
+    jetbrains.pycharm
     magic-wormhole
     mattermost-desktop
     nixfmt-rfc-style

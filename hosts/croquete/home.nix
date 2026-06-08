@@ -23,8 +23,8 @@ let
     handbrake
     htop
     inkscape
-    jetbrains.idea-ultimate
-    jetbrains.pycharm-professional
+    jetbrains.idea
+    jetbrains.pycharm
     libreoffice-still
     magic-wormhole
     mattermost-desktop

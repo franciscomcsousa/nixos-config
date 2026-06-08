@@ -15,7 +15,7 @@
       lualine-nvim
       vim-tmux-navigator
       nvim-lspconfig
-      nvim-treesitter.withAllGrammars
+      nvim-treesitter
       gitsigns-nvim
       git-blame-nvim
       nvim-web-devicons
@@ -54,7 +54,7 @@
       pyright
       gopls
       typescript
-      nodePackages_latest.typescript-language-server
+      typescript-language-server
     ];
   };
 }

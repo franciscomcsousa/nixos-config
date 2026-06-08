@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = "${configDir}/wallpapers/minimal.png";
+    image = "${configDir}/wallpapers/oneshot.png";
 
     fonts = {
       monospace = {
