@@ -38,6 +38,7 @@ in
         alacritty
         git
         kitty
+        lazygit
         neovim
         starship
         tmux

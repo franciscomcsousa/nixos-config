@@ -67,6 +67,7 @@ in
         git
         gtk
         kitty
+        lazygit
         neovim
         scalling
         starship

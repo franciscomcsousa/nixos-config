@@ -69,6 +69,7 @@ in
         git
         gtk
         kitty
+        lazygit
         neovim
         starship
         tmux
