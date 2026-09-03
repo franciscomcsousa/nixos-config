@@ -70,6 +70,7 @@
       gopls
       typescript
       typescript-language-server
+      rust-analyzer
     ];
   };
 }

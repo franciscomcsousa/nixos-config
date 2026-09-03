@@ -106,3 +106,9 @@ vim.lsp.config("ts_ls", {
 	capabilities = capabilities,
 	on_attach = on_attach
 })
+
+-- rust_analyzer: Rust
+vim.lsp.config("rust_analyzer", {
+	capabilities = capabilities,
+	on_attach = on_attach
+})
