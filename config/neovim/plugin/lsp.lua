@@ -16,6 +16,9 @@ local on_attach = function(_, bufnr)
 	bufmap('<leader>S', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Workspace symbols')
 
 	bufmap('K', vim.lsp.buf.hover, 'Hover documentation')
+  bufmap('<leader>d', vim.diagnostic.open_float, 'Show line diagnostics')
+	bufmap('<leader>dn', vim.diagnostic.goto_next, 'Next diagnostic')
+	bufmap('<leader>dp', vim.diagnostic.goto_prev, 'Previous diagnostic')
 
 	bufmap('<leader>i', function()
 		vim.lsp.buf.format { async = true }
@@ -45,6 +48,7 @@ vim.lsp.enable({
 	"pyright",
 	"gopls",
 	"ts_ls",
+  "rust_analyzer",
 })
 
 -- lua_ls: Lua
