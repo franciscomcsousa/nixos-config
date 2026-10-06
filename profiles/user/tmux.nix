@@ -35,15 +35,6 @@ in
         '';
       }
 
-      tmuxPlugins.resurrect
-      {
-        plugin = tmuxPlugins.continuum;
-        extraConfig = ''
-          set -g @continuum-restore 'on' # Tells continuum to auto-restore on startup
-          set -g @continuum-save-interval '15' # Optional: save every 15 minutes
-        '';
-      }
-
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.yank
     ];
