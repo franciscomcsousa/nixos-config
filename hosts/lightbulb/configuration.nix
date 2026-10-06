@@ -98,6 +98,15 @@
     ];
   };
 
+  fileSystems."/wd-drive" = {
+    device = "/dev/disk/by-uuid/c39b2558-524d-4ae2-b284-4adc47cbe48b";
+    fsType = "ext4";
+    options = [
+      "defaults"
+      "nofail"
+    ];
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
