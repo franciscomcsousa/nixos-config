@@ -13,6 +13,10 @@
     stylix = {
       url = "github:danth/stylix/release-26.05";
     };
+
+    nix-minecraft = {
+      url = "github:Infinidoge/nix-minecraft";
+    };
   };
 
   outputs =
@@ -36,6 +40,7 @@
           // {
             overlays = [
               (_final: _prev: { unstable = import inputs.nixpkgs-unstable args; })
+              inputs.nix-minecraft.overlays.default
             ];
           }
         );
@@ -81,6 +86,7 @@
             { networking.hostName = name; }
             home-manager
             inputs.stylix.nixosModules.stylix
+            inputs.nix-minecraft.nixosModules.minecraft-servers
           ]
           ++ (importRecursive dir)
           ++ (importRecursive ./modules);

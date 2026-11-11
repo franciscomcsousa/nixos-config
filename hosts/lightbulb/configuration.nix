@@ -21,6 +21,7 @@
     printer-purge
     exit-node
     librespot
+    nextcloud
   ];
 
   # Bootloader.
@@ -61,6 +62,7 @@
       "wheel"
       "docker"
       "audio"
+      "minecraft"
     ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
